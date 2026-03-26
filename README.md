@@ -60,7 +60,7 @@ Established a plan to correct the DNS configuration by updating the client to us
 ### 5. Verified Full System Functionality
 Verified by confirming hostname resolution through `nslookup` and restored communication to the server using `ping`. User successfully had access to the shared folder. 
 
-**Command Usd**
+**Command Used**
 ```
 nslookup homelab.local
 ```
