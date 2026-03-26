@@ -21,7 +21,7 @@ User attempted to access a shared folder `\\homelab.local\HR` from their worksta
 ## Steps
 
 ### 1. Identified the Problem
-User sent screenshot of their screen when attempting to access shared folder, error message displaying `The network name cannot be found`.
+User sent screenshot of when attempting to access shared folder, error message displaying `The network name cannot be found`.
 
 ![Screenshot 2](2-error-message.png)
 
@@ -78,4 +78,12 @@ ping homelab.local
 ### 6. Documented Findings, Actions and Outcomes.
 Documented the issue, troubleshooting steps, resolutions and verification results in the support ticket for future reference and auditing. Ticket closed.
 
-![Screenshot 7](
+![Screenshot 7](7-ticket-closed.png)
+
+### Key Takeaways
+-DNS misconfiguration can prevent access to internal resources even when network connectivity is fully functional.
+-Verifying connectivity by both hostname and IP address is critical for isolating DNS-related issues.
+- `nslookup`, `ping`, and `ipconfig /all` are essential tools for identifying and diagnosing name resolution problems.
+- Error messages such as “The network name cannot be found” often indicate name resolution issues rather than permission problems.
+- Following a structured troubleshooting methodology helps efficiently identify root cause and avoid unnecessary changes.
+- Proper verification after implementing a fix ensures the issue is fully resolved and prevents recurrence.
