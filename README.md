@@ -64,9 +64,10 @@ Verified by confirming hostname resolution through `nslookup` and restored commu
 ```
 nslookup homelab.local
 ```
+
 ```
 ping homelab.local
-``
+```
 
 ![Screenshot 5](5-nslookup-ping-success.png)
 
