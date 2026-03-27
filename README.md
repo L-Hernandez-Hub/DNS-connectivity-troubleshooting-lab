@@ -7,7 +7,7 @@ Simulate and troubleshoot a real-world IT support scenario where a client-to-ser
 
 ## Lab Environment
 - Windows Server 2019 Virtual Machine
-- Windows 11 Pro Virtual Machine
+- Windows 11 Pro Virtual Machine (domian-joined client)
 
 ---
 
@@ -94,8 +94,8 @@ Documented the issue, troubleshooting steps, resolutions and verification result
 ![Screenshot 7](7-ticket-closed.png)
 
 ### Key Takeaways
--DNS misconfiguration can prevent access to internal resources even when network connectivity is fully functional.
--Verifying connectivity by both hostname and IP address is critical for isolating DNS-related issues.
+- DNS misconfiguration can prevent access to internal resources even when network connectivity is fully functional.
+- Verifying connectivity by both hostname and IP address is critical for isolating DNS-related issues.
 - `nslookup`, `ping`, and `ipconfig /all` are essential tools for identifying and diagnosing name resolution problems.
 - Error messages such as “The network name cannot be found” often indicate name resolution issues rather than permission problems.
 - Following a structured troubleshooting methodology helps efficiently identify root cause and avoid unnecessary changes.
