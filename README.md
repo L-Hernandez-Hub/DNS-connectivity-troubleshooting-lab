@@ -7,7 +7,7 @@ Simulate and troubleshoot a real-world IT support scenario where a client-to-ser
 
 ## Lab Environment
 - Windows Server 2019 Virtual Machine
-- Windows 11 Pro Virtual Machine
+- Windows 11 Pro Virtual Machine (domian-joined client)
 
 ---
 
