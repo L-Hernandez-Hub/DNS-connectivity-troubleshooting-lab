@@ -51,14 +51,21 @@ ping homelab.local
 ---
 
 ### 4. Established a Plan of Action and Implemented the Solution
-Established a plan to correct the DNS configuration by updating the client to use the internal domain DNS server. Logged on workstation with Administrator credentials to perform the DNS configuration. Opened Settings → Network & Internet → Advanced Network Settings → Ethernet drop down → More Adapter Options → Internet Protocol Version 4 (TCP/IPv4) Properties and changed Preferred DNS Server from `8.8.8.8` to `192.168.64.14` (domain controller). 
+Established a plan to correct the DNS configuration by updating the client to use the internal domain DNS server and clear cached DNS records. Logged on workstation with Administrator credentials to perform the DNS configuration. Opened Settings → Network & Internet → Advanced Network Settings → Ethernet drop down → More Adapter Options → Internet Protocol Version 4 (TCP/IPv4) Properties and changed Preferred DNS Server from `8.8.8.8` to `192.168.64.14` (domain controller). 
+
+**Command Used**
+```
+ipconfig /flushdns
+```
 
 ![Screenshot 4](4-updated-dns-server.png)
+
+![Screenshot 4.5](4.5-ipconfig-flushdns.png)
 
 ---
 
 ### 5. Verified Full System Functionality
-Verified by confirming hostname resolution through `nslookup` and restored communication to the server using `ping`. User successfully had access to the shared folder. 
+Verified by confirming hostname resolution through `nslookup`, restored communication to the server using `ping`, and reviewed network configurations with `ipconfig` User successfully had access to the shared folder. 
 
 **Command Used**
 ```
@@ -69,7 +76,13 @@ nslookup homelab.local
 ping homelab.local
 ```
 
+```
+ipconfig /all
+```
+
 ![Screenshot 5](5-nslookup-ping-success.png)
+
+![Screenshot 6.5](6.5-ipconfig-all.png)
 
 ![Screenshot 6](6-shared-folder-accessed.png)
 
