@@ -7,7 +7,7 @@ Simulate and troubleshoot a real-world IT support scenario where a client-to-ser
 
 ## Lab Environment
 - Windows Server 2019 Virtual Machine
-- Windows 11 Pro Virtual Machine (domian-joined client)
+- Windows 11 Pro Virtual Machine
 
 ---
 
@@ -51,7 +51,7 @@ ping homelab.local
 ---
 
 ### 4. Established a Plan of Action and Implemented the Solution
-Established a plan to correct the DNS configuration by updating the client to use the internal domain DNS server and clear cached DNS records. Logged on workstation with Administrator credentials to perform the DNS configuration. Opened Settings → Network & Internet → Advanced Network Settings → Ethernet drop down → More Adapter Options → Internet Protocol Version 4 (TCP/IPv4) Properties and changed Preferred DNS Server from `8.8.8.8` to `192.168.64.14` (domain controller). 
+Established a plan to correct the DNS configuration by updating the client to use the internal domain DNS server and clear cached DNS records using `ipconfig`. Logged on workstation with Administrator credentials to perform the DNS configuration. Opened Settings → Network & Internet → Advanced Network Settings → Ethernet drop down → More Adapter Options → Internet Protocol Version 4 (TCP/IPv4) Properties and changed Preferred DNS Server from `8.8.8.8` to `192.168.64.14` (domain controller). 
 
 **Command Used**
 ```
@@ -94,8 +94,8 @@ Documented the issue, troubleshooting steps, resolutions and verification result
 ![Screenshot 7](7-ticket-closed.png)
 
 ### Key Takeaways
-- DNS misconfiguration can prevent access to internal resources even when network connectivity is fully functional.
-- Verifying connectivity by both hostname and IP address is critical for isolating DNS-related issues.
+-DNS misconfiguration can prevent access to internal resources even when network connectivity is fully functional.
+-Verifying connectivity by both hostname and IP address is critical for isolating DNS-related issues.
 - `nslookup`, `ping`, and `ipconfig /all` are essential tools for identifying and diagnosing name resolution problems.
 - Error messages such as “The network name cannot be found” often indicate name resolution issues rather than permission problems.
 - Following a structured troubleshooting methodology helps efficiently identify root cause and avoid unnecessary changes.
