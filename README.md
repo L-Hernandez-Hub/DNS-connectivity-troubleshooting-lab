@@ -14,7 +14,7 @@ Simulate and troubleshoot a real-world IT support scenario where a client-to-ser
 ## Ticket
 User attempted to access a shared folder `\\homelab.local\HR` from their workstation. Shared folder couldn't be located. Support ticket has been received. 
 
-![Screenshot 1](1-support-ticket.png)
+![Screenshot 1](Screenshots/1-support-ticket.png)
 
 ---
 
@@ -23,7 +23,7 @@ User attempted to access a shared folder `\\homelab.local\HR` from their worksta
 ### 1. Identified the Problem
 User sent screenshot of when attempting to access shared folder, error message displaying `The network name cannot be found`.
 
-![Screenshot 2](2-error-message.png)
+![Screenshot 2](Screenshots/2-error-message.png)
 
 ---
 
@@ -46,7 +46,7 @@ ping 192.168.64.14
 ping homelab.local
 ```
 
-![Screenshot 3](3-nslookup-ping-homelab.local.png)
+![Screenshot 3](Screenshots/3-nslookup-ping-homelab.local.png)
 
 ---
 
@@ -58,9 +58,9 @@ Established a plan to correct the DNS configuration by updating the client to us
 ipconfig /flushdns
 ```
 
-![Screenshot 4](4-updated-dns-server.png)
+![Screenshot 4](Screenshots/4-updated-dns-server.png)
 
-![Screenshot 4.5](4.5-ipconfig-flushdns.png)
+![Screenshot 4.5](Screenshots/4.5-ipconfig-flushdns.png)
 
 ---
 
@@ -80,18 +80,18 @@ ping homelab.local
 ipconfig /all
 ```
 
-![Screenshot 5](5-nslookup-ping-success.png)
+![Screenshot 5](Screenshots/5-nslookup-ping-success.png)
 
-![Screenshot 6.5](6.5-ipconfig-all.png)
+![Screenshot 6.5](Screenshots/6.5-ipconfig-all.png)
 
-![Screenshot 6](6-shared-folder-accessed.png)
+![Screenshot 6](Screenshots/6-shared-folder-accessed.png)
 
 ---
 
 ### 6. Documented Findings, Actions and Outcomes.
 Documented the issue, troubleshooting steps, resolutions and verification results in the support ticket for future reference and auditing. Ticket closed.
 
-![Screenshot 7](7-ticket-closed.png)
+![Screenshot 7](Screenshots/7-ticket-closed.png)
 
 ### Key Takeaways
 - DNS misconfiguration can prevent access to internal resources even when network connectivity is fully functional.
